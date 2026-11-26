@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 const out = await build({
   entryPoints: ['src/index.js'], bundle: true, minify: true, write: false,
   loader: { '.js': 'jsx' },
-  define: { 'process.env.NODE_ENV': '"production"', 'process.env.REACT_APP_DEMO': '"1"' },
+  define: { 'process.env.NODE_ENV': '"production"', 'process.env.REACT_APP_DEMO': '"1"', 'process.env.REACT_APP_API_BASE': JSON.stringify(process.env.APIFLUX_API_BASE || '') },
 });
 const js = out.outputFiles[0].text.replaceAll('</script', '<\\/script');
 const html = readFileSync('public/index.html', 'utf8')
