@@ -374,7 +374,7 @@ export default function App() {
       {/* Toast */}
       {toast && (
         <div style={{
-          position: 'fixed', top: '20px', right: '20px', zIndex: 9999,
+          position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999,
           background: toast.type === 'success' ? '#0d2b1e' : '#2b0d0d',
           border: `1px solid ${toast.type === 'success' ? '#10b98140' : '#ef444440'}`,
           color: toast.type === 'success' ? '#10b981' : '#ef4444',
