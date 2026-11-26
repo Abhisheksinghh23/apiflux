@@ -7,6 +7,15 @@
     <style>
       body { margin: 0; background: #0a0e1a; }
       * { box-sizing: border-box; }
+      @media (max-width: 760px) {
+        .af-root { flex-direction: column !important; height: auto !important; min-height: 100vh; overflow: auto !important; }
+        .af-sidebar { width: 100% !important; max-height: 38vh; border-right: none !important; border-bottom: 1px solid #1e2d4a !important; }
+        .af-urlbar { flex-wrap: wrap; padding: 12px !important; }
+        .af-urlbar input { min-width: 0; flex: 1 1 100% !important; order: 3; }
+        .af-main { overflow: visible !important; }
+        .af-panels { flex-direction: column !important; overflow: visible !important; }
+        .af-req, .af-res { min-height: 60vh; border-right: none !important; overflow: visible !important; }
+      }
     </style>
   </head>
   <body>
