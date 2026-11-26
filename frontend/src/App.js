@@ -370,7 +370,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh', background: '#0a0e1a', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
+    <div className="af-root" style={{ display: 'flex', height: '100vh', background: '#0a0e1a', color: '#e2e8f0', fontFamily: 'Inter, sans-serif', overflow: 'hidden' }}>
       {/* Toast */}
       {toast && (
         <div style={{
@@ -387,7 +387,7 @@ export default function App() {
       )}
 
       {/* SIDEBAR */}
-      <div style={{ width: '280px', background: '#0d1222', borderRight: '1px solid #1e2d4a', display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
+      <div className="af-sidebar" style={{ width: '280px', background: '#0d1222', borderRight: '1px solid #1e2d4a', display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
         {/* Logo */}
         <div style={{ padding: '20px 16px 16px', borderBottom: '1px solid #1e2d4a' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -526,9 +526,9 @@ export default function App() {
       </div>
 
       {/* MAIN PANEL */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+      <div className="af-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Top Bar */}
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid #1e2d4a', display: 'flex', alignItems: 'center', gap: '12px', background: '#0d1222' }}>
+        <div className="af-urlbar" style={{ padding: '16px 20px', borderBottom: '1px solid #1e2d4a', display: 'flex', alignItems: 'center', gap: '12px', background: '#0d1222' }}>
           <select
             value={currentRequest.method}
             onChange={e => setCurrentRequest(p => ({ ...p, method: e.target.value }))}
@@ -592,9 +592,9 @@ export default function App() {
           />
         </div>
 
-        <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
+        <div className="af-panels" style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
           {/* Request Config */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderRight: '1px solid #1e2d4a', overflow: 'hidden' }}>
+          <div className="af-req" style={{ flex: 1, display: 'flex', flexDirection: 'column', borderRight: '1px solid #1e2d4a', overflow: 'hidden' }}>
             {/* Tabs */}
             <div style={{ display: 'flex', borderBottom: '1px solid #1e2d4a', padding: '0 20px', background: '#0d1222' }}>
               {['params', 'headers', 'body', 'auth'].map(t => (
@@ -730,7 +730,7 @@ export default function App() {
           </div>
 
           {/* Response Panel */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+          <div className="af-res" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             {/* Response Header */}
             <div style={{ padding: '12px 20px', borderBottom: '1px solid #1e2d4a', display: 'flex', alignItems: 'center', gap: '12px', background: '#0d1222' }}>
               <span style={{ fontSize: '12px', fontWeight: 600, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Response</span>
