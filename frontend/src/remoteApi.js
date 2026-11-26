@@ -15,7 +15,7 @@ window.fetch = (input, init = {}) => {
 };
 window.addEventListener('DOMContentLoaded', () => {
   const n = document.createElement('div');
-  n.textContent = 'Hosted on a free server: collections, environments and history are stored there, linked to this browser only (no login). Do not save real secrets. Requests to private or local addresses are blocked. The first request after idle can take about a minute.';
+  n.textContent = 'Public demo on a free server. Collections, environments and history are stored there under a random id kept in this browser (not a login, anyone with that id could read it). Never enter real tokens, passwords or private API data. Requests to private or local addresses are blocked. The first request after idle can take about a minute.';
   n.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9;background:#0a0e1a;color:#64748b;font:11px sans-serif;padding:4px 8px;border-top:1px solid #1e2d4a;text-align:center';
   document.body.appendChild(n);
 });
